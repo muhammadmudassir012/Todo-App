@@ -1,0 +1,304 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@500&family=Russo+One&display=swap');
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main container */
+.main-todo {
+    background-color: #fff;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Sub container */
+.sub-todo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Todo heading */
+.heading h1 {
+    font-family: 'Russo One', sans-serif;
+    color: #007BFF; /* Blue color */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Input field */
+#container input.todos {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#container input.todos:focus {
+    border-color: #007BFF; /* Blue color */
+}
+
+/* Buttons */
+.todo-btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+button {
+    width: 48%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007BFF; /* Blue color */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button#delAll {
+    background-color: #FF5722; /* Orange color for delete button */
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Todo List */
+.todo-ul {
+    margin-top: 20px;
+}
+
+.todo-ul ul {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-ul ul li {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-ul ul li button {
+    background-color: transparent;
+    color: #FF5722; /* Orange color for delete button */
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.todo-ul ul li button:hover {
+    background-color: rgba(255, 87, 34, 0.1); /* Lighter orange on hover */
+}
+
+.todo-ul ul li button.edit-btn {
+    color: #007BFF; /* Blue color for edit button */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-todo {
+        width: 100%;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    #container input.todos {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 7px;
+    }
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lora', serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Russo One', sans-serif;
+}
+
+.sub-todo{
+    padding: 10px;
+    background-color: transparent;
+    height: 200px;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+}
+
+#container{
+display: flex;    
+justify-content: center;
+}
+
+#todoh{
+    font-family: 'Russo One', sans-serif;;
+}
+
+.todo-btn{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+#addtodo{
+    padding: 8px;
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
+    margin-right: -30px;
+    box-shadow: 0px 2px 5px black;
+
+}
+
+#delAll{
+    padding: 8px;
+    box-shadow: 0px 2px 5px black;
+    border-radius: 5px;
+    top: 136px;
+    border-style: none;
+    cursor: pointer;
+    margin-left: -70px;    
+}
+
+#todo{
+    width: 300px;
+    border-style: none;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px black;
+
+}
+
+.todo-ul{
+    display: flex;
+    justify-content: center;
+}
+
+.todo-ul ul{
+    margin-right: 20px;
+    margin-top: -20px;
+}
+
+.main-todo{
+    width: 500px;
+    align-items: center;    
+    margin: 20px;
+}
+
+.heading{
+    padding: 8px;
+    margin-top: -10px;
+}
+
+#edit-btn{
+    padding: 5px;
+    margin: 4px;
+    border-style: none;
+    border-radius: 3px;
+    box-shadow: 0px 2px 5px black;
+}
+
+#delete-btn{
+    padding: 5px;
+    margin: 4px;
+    border-style: none;
+    border-radius: 3px;
+    box-shadow: 0px 2px 5px black;
+} */
